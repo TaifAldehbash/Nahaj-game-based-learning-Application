@@ -128,11 +128,15 @@ class _JoinGroup extends State<JoinGroup> {
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 120, vertical: 0),
                   // ignore: deprecated_member_use
-                  child: FlatButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                        side: BorderSide(
-                            color: Color.fromARGB(255, 129, 190, 255))),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                          side: BorderSide(
+                              color: Color.fromARGB(255, 129, 190, 255))),
+                      padding: EdgeInsets.all(0.0),
+                      backgroundColor: Color.fromARGB(255, 129, 190, 255),
+                    ),
                     onPressed: () async {
                       //group code is shorter than usual
                       if (validName) {
@@ -147,9 +151,8 @@ class _JoinGroup extends State<JoinGroup> {
                         }
                       }
                     },
-                    padding: EdgeInsets.all(0.0),
-                    color: Color.fromARGB(255, 129, 190, 255),
-                    textColor: Colors.white,
+
+                    // textColor: Colors.white,
                     //text of button
                     child: Text(
                       "انضمام ",

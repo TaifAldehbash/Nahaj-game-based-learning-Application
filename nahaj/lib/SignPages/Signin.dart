@@ -169,11 +169,15 @@ class _SigninState extends State<Signin> {
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 120, vertical: 0),
                     // ignore: deprecated_member_use
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                          side: BorderSide(
-                              color: Color.fromARGB(255, 129, 190, 255))),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                            side: BorderSide(
+                                color: Color.fromARGB(255, 129, 190, 255))),
+                        padding: EdgeInsets.all(0.0),
+                        backgroundColor: Color.fromARGB(255, 129, 190, 255),
+                      ),
                       onPressed: () async {
                         loginErr = false;
                         if (valid) {
@@ -200,9 +204,8 @@ class _SigninState extends State<Signin> {
                           });
                         }
                       },
-                      padding: EdgeInsets.all(0.0),
-                      color: Color.fromARGB(255, 129, 190, 255),
-                      textColor: Colors.white,
+
+                      // textColor: Colors.white,
                       child: Text(
                         "تسجيل الدخول ",
                         style: TextStyle(
@@ -221,7 +224,7 @@ class _SigninState extends State<Signin> {
                   child: Container(
                     margin: EdgeInsets.all(25),
                     // ignore: deprecated_member_use
-                    child: FlatButton(
+                    child: ElevatedButton(
                       child: Text(
                         " نسيت كلمة المرور؟ ",
                         style: TextStyle(
@@ -316,7 +319,7 @@ class _SigninState extends State<Signin> {
                       margin: EdgeInsets.only(
                           left: 25, top: 25, bottom: 25, right: 10),
                       // ignore: deprecated_member_use
-                      child: FlatButton(
+                      child: ElevatedButton(
                         child: Text(
                           "تسجيل",
                           style: TextStyle(

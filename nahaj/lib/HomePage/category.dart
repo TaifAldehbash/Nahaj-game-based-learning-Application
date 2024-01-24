@@ -101,7 +101,7 @@ class _Category extends State<Category> {
           ),
           //Back button
           // ignore: deprecated_member_use
-          FlatButton(
+          ElevatedButton(
             child: Padding(
               padding: EdgeInsets.only(top: 4.0.w, left: 0.0.w),
               child: Image(

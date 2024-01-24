@@ -280,17 +280,20 @@ class _SignupState extends State<SignUp> {
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 120, vertical: 0),
                     // ignore: deprecated_member_use
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                          side: BorderSide(
-                              color: Color.fromARGB(255, 129, 190, 255))),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                            side: BorderSide(
+                                color: Color.fromARGB(255, 129, 190, 255))),
+                        padding: EdgeInsets.all(0.0),
+                        backgroundColor: Color.fromARGB(255, 129, 190, 255),
+                      ),
                       onPressed: () {
                         createUser(name, email, password);
                       },
-                      padding: EdgeInsets.all(0.0),
-                      color: Color.fromARGB(255, 129, 190, 255),
-                      textColor: Colors.white,
+
+                      // textColor: Colors.white,
                       child: Text(
                         "تسجيل ",
                         style: TextStyle(
